@@ -1,0 +1,66 @@
+Sformatowany przyk³ad: 
+{
+  "status": {
+    "createdAt": "Wed Jun 27 22:47:17 +0000 2018",
+    "id": 1012105113496940500,
+    "text": "I'm at ????—?—? ???? - @famima_now in ????, ??? https://t.co/lXtUjjG9qU",
+    "entities": {
+      "urls": [
+        {
+          "url": "https://t.co/lXtUjjG9qU",
+          "expandedUrl": "https://www.swarmapp.com/c/3A7TjNY18FY",
+          "displayUrl": "swarmapp.com/c/3A7TjNY18FY"
+        }
+      ]
+    },
+    "user": {
+      "id": 187131472,
+      "name": "morelemon",
+      "location": "???"
+    },
+    "geo": null,
+    "place": null,
+    "lang": "ja"
+  },
+  "checkin": {
+    "id": "5b3413f5088158002c593d39",
+    "createdAt": 1530139637,
+    "venue": {
+      "id": "4f533194e4b0ac6d0ce2154c",
+      "name": "FamilyMart",
+      "location": {
+        "address": "?????5-2",
+        "lat": 35.17601765801681,
+        "lng": 136.88071076387328
+      },
+      "categories": [
+        {
+          "id": "4d954b0ea243a5684a65b473",
+          "name": "Convenience Store",
+          "pluralName": "Convenience Stores",
+          "shortName": "Convenience Store",
+          "primary": true
+        }
+      ],
+      "stats": {
+        "checkinsCount": 891,
+        "usersCount": 146,
+        "tipCount": 0,
+        "visitsCount": 0
+      },
+      "price": null,
+      "likes": null,
+      "rating": null,
+      "ratingSignals": null,
+      "primaryCategory": {
+        "present": true
+      }
+    },
+    "user": {
+      "id": "59076300",
+      "firstName": "morelemon",
+      "gender": "male"
+    }
+  }
+}
+ 

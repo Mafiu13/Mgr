@@ -1,26 +1,32 @@
 import sys
 import json
 
-def read_csv_data(csv_data):
-    # checkins_swarmapp_foursquare_world_1-8_sorted_uq.csv
-    file = open(csv_data, encoding="utf8")
-    records = {}
-    for i, f in enumerate(file):
-        r = json.loads(f)
 
-        #validowac ladniej (biblioteka marshmallow, pydantic - macko preferuje)
-        checkin_id = r.get("checkin", {}).get("id")
-        if not checkin_id: continue
+def read_json(file_name):
+    with open(file_name) as json_file:
+        data = json.load(json_file)
+        return data
 
-        formatted = {
-            "checkin_id": checkin_id,
-            "checkin_date": r["checkin"]["createdAt"],
-            "user": r["user"],
-            "language": r["lang"],
-            "venue": r["venue"],
-            "categories": r["categories"],
-        }
-        records[checkin_id] = formatted
-        print(i)
-    return list(records.values())
-    #print(records[0]["status"]["createdAt"])
+
+def restructure_data_to_default(dicionary):
+    records = []
+    for key in dicionary:
+        records.extend(dicionary[key])
+    return records
+
+
+def restructure_data_by_key(records, key):
+    user_data = {}
+    for record in records:
+        key_data = record[key]
+        if not key_data in user_data:
+            user_data[key_data] = []
+        user_data[key_data].append(record)
+    return user_data
+
+
+def get_data_from(json_data, key):
+    data = json_data.get(key, {})
+    if not data:
+        raise Exception("no data")
+    return data
